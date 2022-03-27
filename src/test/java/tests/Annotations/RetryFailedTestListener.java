@@ -15,8 +15,8 @@ public class RetryFailedTestListener implements IRetryAnalyzer {
     public boolean retry(ITestResult iTestResult) {
         if (!iTestResult.isSuccess()) { //Check if test not succeed
             System.out.println("Test Result - " + iTestResult.getStatus() + " Retry attempt - " + (count+1));
-            if (count < maxTries) {                            //Check if maxtry count is reached
-                count++;                                     //Increase the maxTry count by 1
+            if (count < maxTries) {                            //Check if maxTries count is reached
+                count++;                                     //Increase the count by 1
                 iTestResult.setStatus(ITestResult.FAILURE);  //Mark test as failed
                 return true;                                 //Tells TestNG to re-run the test
             } else {

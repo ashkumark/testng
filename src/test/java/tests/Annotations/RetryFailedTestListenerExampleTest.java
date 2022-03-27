@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.*;
 
-public class RetryFailedTestListenerExampletest {
+public class RetryFailedTestListenerExampleTest {
 
     @BeforeMethod
     public void BeforeMethod(){
@@ -19,21 +19,22 @@ public class RetryFailedTestListenerExampletest {
     }
 
     // retryAnalyzer attribute NOT required while running via testng AnnotationTransformer xml
-    @Test(retryAnalyzer = RetryFailedTestListener.class)
+   //@Test(retryAnalyzer = RetryFailedTestListener.class)
+    @Test
     public void test1() {
         //Negative Scenario
         System.out.println("Test 1..");
         assertEquals(2+2,5,"Addition Problem! 2+2 must be 4!\n");
     }
 
-    @Test(retryAnalyzer = RetryFailedTestListener.class)
+    @Test
     public void test2() {
         //Negative Scenario
         System.out.println("Test 2..");
         assertEquals(2+2,3,"Addition Problem! 2+2 must be 4!\n");
     }
 
-    @Test(retryAnalyzer = RetryFailedTestListener.class)
+    @Test
     public void test3() {
         //Postive Scenario
         System.out.println("Test 3..");

@@ -6,7 +6,7 @@ import org.testng.annotations.ITestAnnotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-public class AnnotationTransformer implements IAnnotationTransformer {
+public class AnnotationTransformerRetryAnalyzerListener implements IAnnotationTransformer {
 
     // Set retry analysed to retry failed test listener - this helps in not using attribute for every @Test
 

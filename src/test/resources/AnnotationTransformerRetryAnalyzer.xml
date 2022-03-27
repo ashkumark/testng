@@ -2,11 +2,11 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestNG Listener">
     <listeners>
-        <listener class-name="tests.Annotations.AnnotationTransformer"/>
+        <listener class-name="tests.Annotations.AnnotationTransformerRetryAnalyzerListener"/>
     </listeners>
     <test name="TestNG Retry Test">
         <classes>
-            <class name="tests.Annotations.RetryFailedTestListenerExampletest"/>
+            <class name="tests.Annotations.RetryFailedTestListenerExampleTest"/>
         </classes>
     </test>
 </suite>
