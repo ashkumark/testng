@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG Listener">
+    <listeners>
+        <listener class-name="tests.Annotations.AnnotationTransformer"/>
+    </listeners>
+    <test name="TestNG Retry Test">
+        <classes>
+            <class name="tests.Annotations.RetryFailedTestListenerExampletest"/>
+        </classes>
+    </test>
+</suite>

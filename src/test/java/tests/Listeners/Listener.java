@@ -14,6 +14,16 @@ public class Listener implements ISuiteListener, ITestListener, IInvokedMethodLi
 
 
     @Override
+    public void onStart(ISuite suite) {
+        ISuiteListener.super.onStart(suite);
+    }
+
+    @Override
+    public void onFinish(ISuite suite) {
+        ISuiteListener.super.onFinish(suite);
+    }
+
+    @Override
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
         IInvokedMethodListener.super.beforeInvocation(method, testResult);
         System.out.println("On method invocation.." + method );
